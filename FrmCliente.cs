@@ -33,10 +33,15 @@ namespace PesquisaCliente
             Cliente Metodo_Cliente = new Cliente();
             DataSet ResultadodaPesquisa = new DataSet();
 
-            ResultadodaPesquisa = Metodo_Cliente.List_Client(ButtomPesquisa.Text);
+            ResultadodaPesquisa = Metodo_Cliente.List_Client(TextPesquisa.Text);
             DgCliente.DataSource = ResultadodaPesquisa.Tables[0];
 
             DgCliente.Refresh();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
